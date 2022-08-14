@@ -1,0 +1,68 @@
+@import './../styles/variables.scss';
+
+.trending {
+  padding: 3rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+
+    background-color: $dark;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    //padding: 1rem;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1.1);
+    }
+    transition: 0.4s ease all;
+
+    &__poster {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      object-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__info {
+      background-color: $dark;
+      padding: 0.75rem 1.25rem;
+      border-radius: $borderRadius;
+
+      h3 {
+        color: $light;
+        text-align: center;
+      }
+
+      &__tombol {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+
+        button {
+          width: 70px;
+          height: 1.6rem;
+          cursor: pointer;
+          font-size: 1rem;
+          background-color: rgb(238, 238, 116);
+          color: $dark;
+          border-radius: 5px;
+          font-weight: 600;
+
+          &:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+            background-color: white;
+          }
+
+          transition: 0.3s ease all;
+        }
+      }
+    }
+  }
+}

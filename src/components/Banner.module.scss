@@ -1,0 +1,10 @@
+@import './../styles/variables.scss';
+
+.banner {
+  padding: 1.5rem 3rem;
+  color: $light;
+  font-size: 2rem;
+  border: solid 2px $light;
+  text-align: center;
+  margin: $spacing-lg;
+}

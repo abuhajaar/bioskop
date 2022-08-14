@@ -1,0 +1,77 @@
+@import './../styles/variables.scss';
+
+.header {
+  background-color: $dark;
+  width: 100%;
+  padding: 1rem 2rem;
+  @include breakpoint(md) {
+    padding: 1rem 3rem;
+  }
+  transition: 0.3s ease all;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    height: 100%;
+
+    &__logo {
+      color: $light;
+      font-size: 2.3rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &__navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          padding: $spacing-md;
+
+          a {
+            color: $light;
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: $borderRadius;
+            padding: $spacing-md;
+
+            &:hover {
+              background-color: $primary;
+              color: $darkgrey;
+            }
+            transition: 0.3s ease all;
+          }
+        }
+      }
+    }
+
+    &__button {
+      padding: $spacing-md;
+      color: $dark;
+      background-color: $light;
+      border-radius: $borderRadius;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 1px;
+
+      &:hover {
+        letter-spacing: 2px;
+      }
+
+      transition: 0.3s ease all;
+    }
+  }
+}
